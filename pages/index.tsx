@@ -1,12 +1,14 @@
 import React from "react";
+import Hero from "../Components/hero"
+import Header from "@/Components/header";
 
 
 const Home = () => {
   return (
-    <div>
-      <h1>Welcome to My Next.js Project</h1>
-      <p>This is the home page.</p>
-    </div>
+    <>
+      <Header />
+      <Hero />
+    </>
   );
 };
 
