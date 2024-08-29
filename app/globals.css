@@ -32,6 +32,11 @@
   animation-delay: .6s;
 }
 
+.delay02 {
+  -webkit-animation-delay: .8s;
+  animation-delay: .8s;
+}
+
 @-webkit-keyframes slide {
   0% {
     opacity: 0;
