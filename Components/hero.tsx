@@ -55,7 +55,7 @@ const Hero: React.FC = () => {
                                 colorScheme="black"
                                 variant="outline"
                                 size={{ base: "sm", md: "md" }}
-                                className="flex items-center px-6 py-3 text-lg font-medium hover:bg-[#f5f5f5] transition duration-300 ease-in-out"
+                                className="flex items-center px-6 py-3 text-lg font-medium hover:bg-[#3CCF91] transition duration-300 ease-in-out"
                             >
                                 Github
                             </Button>
@@ -66,7 +66,7 @@ const Hero: React.FC = () => {
                                 colorScheme="black"
                                 variant="outline"
                                 size={{ base: "sm", md: "md" }}
-                                className="flex items-center px-6 py-3 text-lg font-medium hover:bg-[#f5f5f5] transition duration-300 ease-in-out"
+                                className="flex items-center px-6 py-3 text-lg font-medium hover:bg-[#3CCF91] transition duration-300 ease-in-out"
                             >
                                 LinkedIn
                             </Button>
@@ -77,7 +77,7 @@ const Hero: React.FC = () => {
                                 colorScheme="black"
                                 variant="outline"
                                 size={{ base: "sm", md: "md" }}
-                                className="flex items-center px-6 py-3 text-lg font-medium hover:bg-[#f5f5f5] transition duration-300 ease-in-out"
+                                className="flex items-center px-6 py-3 text-lg font-medium hover:bg-[#3CCF91] transition duration-300 ease-in-out"
                             >
                                 Email
                             </Button>
