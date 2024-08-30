@@ -6,7 +6,7 @@ import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 const Hero: React.FC = () => {
     return (
         <ChakraProvider>
-            <div className="relative max-w-screen-xl w-full my-0 mx-auto px-4 pt-[18vh] pb-[14vh] md:pt-[26vh] md:pb-[18vh]">
+            <div className="relative max-w-screen-xl w-full my-0 mx-auto px-4 pt-[18vh] pb-[14vh] md:pt-[26vh] md:pb-[18vh] slide delay01">
                 {/* Background SVG */}
                 <div className="absolute inset-0 flex justify-center items-center opacity-10">
                     <svg
@@ -25,19 +25,24 @@ const Hero: React.FC = () => {
                 </div>
 
                 {/* Text Content */}
-                <h1 className="relative text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-poppins font-semibold heroText pb-6 md:pb-8">
-                    Hey, I&apos;m Marmik Patel,
+                <p className="relative text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-medium text-gray-600 leading-relaxed slide delay md:leading-loose">
+                    Hey There! I&apos;m-
+                </p>
+
+                <br />
+                <h1 className="relative text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-poppins font-semibold heroText pb-6 md:pb-8">
+                    Marmik Patel.
                     <br />
-                    a <span className="heroText2">Software Developer</span>
+                    <span className="heroText2">Software Developer</span>
                 </h1>
-                <p className="relative text-base md:text-lg lg:text-xl xl:text-2xl font-light text-gray-600 leading-relaxed md:leading-loose mb-8 md:mb-10">
-                    I specialize in building modern, scalable web applications.
+                <p className="relative text-base md:text-lg lg:text-xl xl:text-2xl font-light text-gray-600 leading-relaxed slide delay02 md:leading-loose mb-8 md:mb-10">
+                    Driven by a passion for coding,
                     <br />
                     My goal is to turn ideas into reality with elegant and efficient code.
                 </p>
 
                 {/* Social Media Links */}
-                <div className="relative">
+                <div className="relative slide delay02">
                     <Stack
                         direction="row"
                         spacing={4}
