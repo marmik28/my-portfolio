@@ -8,17 +8,19 @@ const Hero: React.FC = () => {
         <ChakraProvider>
             <div className="relative max-w-screen-xl w-full my-0 mx-auto px-4 pt-[18vh] pb-[14vh] md:pt-[26vh] md:pb-[18vh]">
                 {/* Background SVG */}
-                <div className="absolute inset-0 overflow-hidden">
+                <div className="absolute inset-0 flex justify-center items-center opacity-10">
                     <svg
-                        viewBox="0 0 1440 320"
-                        className="absolute bottom-0 w-full h-full"
                         xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="w-[80vw] h-[80vh] text-slate-500"
                     >
-                        <path
-                            fill="#F0F4F8"
-                            fillOpacity="1"
-                            d="M0,320L1440,160L1440,320L0,320Z"
-                        ></path>
+                        <polyline points="15 3 21 9 15 15"></polyline>
+                        <polyline points="9 21 3 15 9 9"></polyline>
                     </svg>
                 </div>
 
@@ -26,7 +28,7 @@ const Hero: React.FC = () => {
                 <h1 className="relative text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-poppins font-semibold heroText pb-6 md:pb-8">
                     Hey, I&apos;m Marmik Patel,
                     <br />
-                    a Software Developer.
+                    a <span className="heroText2">Software Developer</span>
                 </h1>
                 <p className="relative text-base md:text-lg lg:text-xl xl:text-2xl font-light text-gray-600 leading-relaxed md:leading-loose mb-8 md:mb-10">
                     I specialize in building modern, scalable web applications.
