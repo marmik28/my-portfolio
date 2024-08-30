@@ -21,9 +21,9 @@ const Header: React.FC = () => {
     return (
         <div className="block">
         <div className="flex justify-between items-center fixed z-50 top-0 left-0 right-0 mx-auto max-w-screen-xl w-full py-4 bg-white md:py-8">
-            <p className="m-0 py-0 px-4 font-poppins font-medium slide delay text-3xl md:text-4xl">
+            <p className="m-0 py-0 px-4 font-poppins font-medium slide delay text-3xl">
                 <span className="heroText2">&lt;</span>
-                Marmik
+                M /
                 <span className="heroText2">&gt;</span>
             </p>
             <div className="hidden md:flex justify-between text-2xl font-medium">
