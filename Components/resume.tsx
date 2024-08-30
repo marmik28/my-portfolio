@@ -53,14 +53,6 @@ const ResumeSection: React.FC = () => {
                                         Graduated with honors. Focused on software engineering, algorithms, and data structures.
                                     </Text>
                                 </Box>
-                                <Divider my={6} />
-                                <Box className="timeline-item">
-                                    <Text className="font-semibold">High School Diploma</Text>
-                                    <Text className="text-gray-600">High School of Learning, 2010 - 2014</Text>
-                                    <Text className="mt-2">
-                                        Achieved top grades in mathematics and science. Participated in coding clubs and competitions.
-                                    </Text>
-                                </Box>
                             </Box>
                         </Box>
                     </VStack>
