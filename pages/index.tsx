@@ -7,7 +7,7 @@ import ResumeSection from "@/Components/resume";
 
 const Home = () => {
   useEffect(() => {
-    window.history.scrollRestoration = 'manual'
+    window.history.scrollRestoration = "manual";
   }, []);
   return (
     <>
