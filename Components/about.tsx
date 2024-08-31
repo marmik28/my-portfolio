@@ -26,20 +26,20 @@ const AboutMe: React.FC = () => {
                             </Text>
                             <Stack spacing={6} className="text-base md:text-lg lg:text-xl font-light text-gray-600 leading-relaxed md:leading-loose">
                                 <Text>
-                                    I'm Marmik Patel, a software developer with a passion for creating modern, scalable web applications.
+                                    I&apos;m Marmik Patel, a software developer with a passion for creating modern, scalable software.
                                 </Text>
                                 <Text>
                                     My journey in coding began with a deep fascination for problem-solving and a love for technology.
-                                    Over the years, I've honed my skills in full-stack development, mastering technologies like React,
+                                    Over the years, I&apos;ve honed my skills in full-stack development, mastering technologies like React,
                                     Node.js, and more.
                                 </Text>
                                 <Text>
                                     I believe in writing clean, efficient code that not only works but also adds value to the user experience.
-                                    When I'm not coding, I enjoy exploring new technologies, contributing to open-source projects, and
+                                    When I&apos;m not coding, I enjoy exploring new technologies, contributing to open-source projects, and
                                     engaging with the developer community.
                                 </Text>
                                 <Text>
-                                    I'm constantly learning and evolving, driven by my passion for coding and a commitment to delivering
+                                    I&apos;m constantly learning and evolving, driven by my passion for coding and a commitment to delivering
                                     high-quality software solutions.
                                 </Text>
                             </Stack>
