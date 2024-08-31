@@ -6,59 +6,83 @@ import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 const Hero: React.FC = () => {
     return (
         <ChakraProvider>
-            <div className="max-w-screen-xl w-full my-0 mx-auto px-4 pt-[16vh] pb-[12vh] md:pt-[24vh] md:pb-[16vh]">
-                <h1 className="text-3xl md:text-6xl lg:text-7xl font-poppins font-semibold heroText pb-6 md:pb-8 slide delay01">
-                    Software Developer.
+            <div className="relative max-w-screen-xl w-full my-0 mx-auto px-4 pt-[18vh] pb-[14vh] md:pt-[26vh] md:pb-[18vh] slide delay01">
+                {/* Background SVG */}
+                <div className="absolute inset-0 flex justify-center items-center opacity-10">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="w-[80vw] h-[80vh] text-slate-500"
+                    >
+                        <polyline points="15 3 21 9 15 15"></polyline>
+                        <polyline points="9 21 3 15 9 9"></polyline>
+                    </svg>
+                </div>
+
+                {/* Text Content */}
+                <p className="relative text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-medium text-gray-600 leading-relaxed slide delay md:leading-loose">
+                    Hey There! I&apos;m-
+                </p>
+
+                <br />
+                <h1 className="relative text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-poppins font-semibold heroText pb-6 md:pb-8">
+                    Marmik Patel.
                     <br />
-                    Crafting solutions with coding.
+                    <span className="heroText2">Software Developer</span>
                 </h1>
-                <div>
+                <p className="relative text-base md:text-lg lg:text-xl xl:text-2xl font-light text-gray-600 leading-relaxed slide delay02 md:leading-loose mb-8 md:mb-10">
+                    Driven by a passion for coding,
+                    <br />
+                    My goal is to turn ideas into reality with elegant and efficient code.
+                </p>
+
+                {/* Social Media Links */}
+                <div className="relative slide delay02">
                     <Stack
-                    direction="row"
-                    spacing={4}
-                    align="center"
-                    justify={{ sm: "space-evenly", md: "flex-start" }}
-                >
-                    <a
-                        href="https://github.com"
+                        direction="row"
+                        spacing={4}
+                        align="center"
+                        justify={{ sm: "space-evenly", md: "flex-start" }}
                     >
-                        <Button
-                            leftIcon={<FaGithub />}
-                            colorScheme="black"
-                            variant="outline"
-                            size={{ base: "sm", md: "md" }}
-                            className="flex items-center px-6 py-3 text-lg font-medium hover:bg-[#f5f5f5] transition duration-300 ease-in-out"
-                        >
-                            Github
-                        </Button>
-                    </a>
-                    <a
-                        href="https://linkedin.com"
-                    >
-                        <Button
-                            leftIcon={<FaLinkedin />}
-                            colorScheme="black"
-                            variant="outline"
-                            size={{ base: "sm", md: "md" }}
-                            className="flex items-center px-6 py-3 text-lg font-medium hover:bg-[#f5f5f5] transition duration-300 ease-in-out"
-                        >
-                            LinkedIn
-                        </Button>
-                    </a>
-                    <a
-                        href="mailto:example@example.com"
-                    >
-                        <Button
-                            leftIcon={<FaEnvelope />}
-                            colorScheme="black"
-                            variant="outline"
-                            size={{ base: "sm", md: "md" }}
-                            className="flex items-center px-6 py-3 text-lg font-medium hover:bg-[#f5f5f5] transition duration-300 ease-in-out"
-                        >
-                            Email
-                        </Button>
-                    </a>
-                </Stack>
+                        <a href="https://github.com">
+                            <Button
+                                leftIcon={<FaGithub />}
+                                colorScheme="black"
+                                variant="outline"
+                                size={{ base: "sm", md: "md" }}
+                                className="flex items-center px-6 py-3 text-lg font-medium hover:bg-[#3CCF91] transition duration-300 ease-in-out"
+                            >
+                                Github
+                            </Button>
+                        </a>
+                        <a href="https://linkedin.com">
+                            <Button
+                                leftIcon={<FaLinkedin />}
+                                colorScheme="black"
+                                variant="outline"
+                                size={{ base: "sm", md: "md" }}
+                                className="flex items-center px-6 py-3 text-lg font-medium hover:bg-[#3CCF91] transition duration-300 ease-in-out"
+                            >
+                                LinkedIn
+                            </Button>
+                        </a>
+                        <a href="mailto:example@example.com">
+                            <Button
+                                leftIcon={<FaEnvelope />}
+                                colorScheme="black"
+                                variant="outline"
+                                size={{ base: "sm", md: "md" }}
+                                className="flex items-center px-6 py-3 text-lg font-medium hover:bg-[#3CCF91] transition duration-300 ease-in-out"
+                            >
+                                Email
+                            </Button>
+                        </a>
+                    </Stack>
                 </div>
             </div>
         </ChakraProvider>
