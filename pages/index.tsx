@@ -4,6 +4,7 @@ import Header from "@/Components/header";
 import AboutMe from "@/Components/about";
 import ProjectsSection from "@/Components/projects";
 import ResumeSection from "@/Components/resume";
+import Footer from "@/Components/footer";
 
 const Home = () => {
   useEffect(() => {
@@ -28,6 +29,8 @@ const Home = () => {
       <section id="resume">
         <ResumeSection />
       </section>
+
+      <Footer />
     </>
   );
 };

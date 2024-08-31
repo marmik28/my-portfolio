@@ -26,7 +26,7 @@ const AboutMe: React.FC = () => {
                             </Text>
                             <Stack spacing={6} className="text-base md:text-lg lg:text-xl font-light text-gray-600 leading-relaxed md:leading-loose">
                                 <Text>
-                                    I&apos;m Marmik Patel, a software developer with a passion for creating modern, scalable web applications.
+                                    I&apos;m Marmik Patel, a software developer with a passion for creating modern, scalable software.
                                 </Text>
                                 <Text>
                                     My journey in coding began with a deep fascination for problem-solving and a love for technology.
