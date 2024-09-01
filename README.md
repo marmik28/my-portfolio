@@ -18,7 +18,6 @@ You can view the live website at [marmik.io](https://marmik.io).
 
 - **Responsive Design**: The website is fully responsive and adapts to different screen sizes.
 - **Animated Sections**: Sections like 'About Me' and 'Projects' feature smooth animations using Framer Motion.
-- **Dark Mode**: Support for both light and dark themes with Chakra UI's built-in color mode management.
 - **Projects Showcase**: Displays my GitHub repositories as projects with detailed descriptions and links.
 
 ## 🛠️ Installation & Setup
@@ -52,12 +51,9 @@ To run this project locally, follow these steps:
 
 ## 📝 License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. For details, see the [LICENSE](https://github.com/marmik28/my-portfolio/blob/master/Licence) file.
 
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/MarmikPatel/portfolio/issues).
 
 ## 📧 Contact
 
-If you have any questions or feedback, please reach out to me at [your-email@example.com](mailto:your-email@example.com).
+If you have any questions or feedback, please email me at [email](mailto:marmik281112002@gmail.com).
