@@ -49,7 +49,7 @@ const Hero: React.FC = () => {
             align="center"
             justify={{ sm: "space-evenly", md: "flex-start" }}
           >
-            <a href="https://github.com">
+            <a href="https://github.com/marmik28">
               <Button
                 leftIcon={<FaGithub />}
                 colorScheme="black"
@@ -60,7 +60,7 @@ const Hero: React.FC = () => {
                 Github
               </Button>
             </a>
-            <a href="https://linkedin.com">
+            <a href="www.linkedin.com/in/marmikpatel28">
               <Button
                 leftIcon={<FaLinkedin />}
                 colorScheme="black"
@@ -71,7 +71,7 @@ const Hero: React.FC = () => {
                 LinkedIn
               </Button>
             </a>
-            <a href="mailto:example@example.com">
+            <a href="mailto:marmik28112002@gmail.com">
               <Button
                 leftIcon={<FaEnvelope />}
                 colorScheme="black"
