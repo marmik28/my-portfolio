@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
                                 Github
                             </Button>
                         </Link>
-                        <Link href="www.linkedin.com/in/marmikpatel28" passHref>
+                        <Link href="https://www.linkedin.com/in/marmikpatel28" passHref>
                             <Button
                                 leftIcon={<FaLinkedin />}
                                 colorScheme="blackAlpha"

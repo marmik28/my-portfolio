@@ -60,7 +60,7 @@ const Hero: React.FC = () => {
                 Github
               </Button>
             </a>
-            <a href="www.linkedin.com/in/marmikpatel28">
+            <a href="https://www.linkedin.com/in/marmikpatel28">
               <Button
                 leftIcon={<FaLinkedin />}
                 colorScheme="black"
