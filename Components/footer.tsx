@@ -29,9 +29,8 @@ const Footer: React.FC = () => {
                         align="center"
                         justify="center"
                     >
-                        <Link href="https://github.com" passHref>
+                        <Link href="https://github.com/marmik28" passHref>
                             <Button
-                                as="a"
                                 leftIcon={<FaGithub />}
                                 colorScheme="blackAlpha"
                                 variant="outline"
@@ -41,9 +40,8 @@ const Footer: React.FC = () => {
                                 Github
                             </Button>
                         </Link>
-                        <Link href="https://linkedin.com" passHref>
+                        <Link href="www.linkedin.com/in/marmikpatel28" passHref>
                             <Button
-                                as="a"
                                 leftIcon={<FaLinkedin />}
                                 colorScheme="blackAlpha"
                                 variant="outline"
@@ -53,9 +51,8 @@ const Footer: React.FC = () => {
                                 LinkedIn
                             </Button>
                         </Link>
-                        <Link href="mailto:example@example.com" passHref>
+                        <Link href="mailto:marmik28112002@gmail.com" passHref>
                             <Button
-                                as="a"
                                 leftIcon={<FaEnvelope />}
                                 colorScheme="blackAlpha"
                                 variant="outline"
