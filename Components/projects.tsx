@@ -1,15 +1,40 @@
 import React, { useEffect, useState } from "react";
-import { ChakraProvider, Box, Text, Grid, Link, Image } from "@chakra-ui/react";
+import {
+  ChakraProvider,
+  Box,
+  Text,
+  Grid,
+  LinkBox,
+  LinkOverlay,
+  Image,
+  useColorMode,
+  useColorModeValue,
+  Button,
+  Icon,
+} from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import { FaGithub } from "react-icons/fa";
+
+interface GitHubRepo {
+  id: number;
+  name: string;
+  description: string;
+  html_url: string;
+  topics: string[];
+}
 
 const ProjectsSection: React.FC = () => {
-  const [repos, setRepos] = useState<any[]>([]);
+  const [repos, setRepos] = useState<GitHubRepo[]>([]);
 
   useEffect(() => {
-    // Fetch GitHub repos
     fetch("https://api.github.com/users/marmik28/repos")
       .then((response) => response.json())
-      .then((data) => setRepos(data));
+      .then((data: GitHubRepo[]) => {
+        const filteredRepos = data.filter((repo) =>
+          repo.topics.includes("portfolio") // replace "portfolio" with your specific topic
+        );
+        setRepos(filteredRepos);
+      });
   }, []);
 
   return (
@@ -21,7 +46,9 @@ const ProjectsSection: React.FC = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.2 }}
         >
-          <Text className="text-4xl md:text-5xl lg:text-6xl font-poppins font-semibold pb-8 ">
+          <Text
+            className="text-4xl md:text-5xl lg:text-6xl font-poppins font-semibold pb-8"
+          >
             Projects
           </Text>
 
@@ -34,30 +61,35 @@ const ProjectsSection: React.FC = () => {
             gap={6}
           >
             {repos.map((repo) => (
-              <Box
+              <LinkBox
                 key={repo.id}
+                as={motion.div}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                p={5}
                 borderWidth="1px"
                 borderRadius="lg"
                 overflow="hidden"
-                p={4}
-                bg="white"
                 shadow="md"
                 transition="all 0.3s ease-in-out"
                 _hover={{ shadow: "lg" }}
               >
-                <Text fontWeight="bold" fontSize="xl" mb={2}>
-                  {repo.name}
-                </Text>
-                <Text mb={4} color="gray.600">
-                  {repo.description}
-                </Text>
-                <Link href={repo.html_url} isExternal>
-                  <Image
-                    src={`https://img.shields.io/github/stars/marmik28/${repo.name}?style=social`}
-                    alt={`${repo.name} stars`}
-                  />
-                </Link>
-              </Box>
+                <LinkOverlay href={repo.html_url} isExternal>
+                  <Text fontWeight="bold" fontSize="xl" mb={2}>
+                    {repo.name}
+                  </Text>
+                  <Text mb={4} color="gray.600">
+                    {repo.description}
+                  </Text>
+                  <Button
+                    leftIcon={<Icon as={FaGithub} />}
+                    colorScheme="teal"
+                    variant="outline"
+                  >
+                    View Repository
+                  </Button>
+                </LinkOverlay>
+              </LinkBox>
             ))}
           </Grid>
         </motion.div>

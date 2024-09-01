@@ -26,6 +26,7 @@ import {
   SiNextdotjs,
   SiJenkins,
   SiJavascript,
+  SiSpringboot,
 } from "react-icons/si";
 
 const MotionBox = motion(Box);
@@ -179,6 +180,14 @@ const ResumeSection: React.FC = () => {
                     </Box>
                     <Text ml={4} fontSize={{ base: "sm", md: "md" }}>
                       Java
+                    </Text>
+                  </Flex>
+                  <Flex align="center">
+                    <Box boxSize={{ base: "30px", md: "40px" }}>
+                      <SiSpringboot size="100%" color="#8BC34A" />
+                    </Box>
+                    <Text ml={4} fontSize={{ base: "sm", md: "md" }}>
+                      SpringBoot
                     </Text>
                   </Flex>
                   <Flex align="center">
