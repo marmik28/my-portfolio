@@ -1,4 +1,4 @@
-# Marmik Patel's Portfolio Website
+# My-portfolio Website
 
 Welcome to the repository for my personal portfolio website, which showcases my skills, projects, and experience as a software developer.
 
