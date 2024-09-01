@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-key */
 import React, { useEffect, useState } from "react";
 import { ChakraProvider, Box, Text, Grid, Link, Image } from "@chakra-ui/react";
 import { motion } from "framer-motion";

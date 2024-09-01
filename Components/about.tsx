@@ -1,5 +1,4 @@
 import React from "react";
-import "../app/globals.css";
 import { ChakraProvider, Box, Text, Stack, Image, Flex } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import "../app/globals.css";
