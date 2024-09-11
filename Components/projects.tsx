@@ -6,9 +6,6 @@ import {
   Grid,
   LinkBox,
   LinkOverlay,
-  Image,
-  useColorMode,
-  useColorModeValue,
   Button,
   Icon,
 } from "@chakra-ui/react";
@@ -31,7 +28,7 @@ const ProjectsSection: React.FC = () => {
       .then((response) => response.json())
       .then((data: GitHubRepo[]) => {
         const filteredRepos = data.filter((repo) =>
-          repo.topics.includes("portfolio") // replace "portfolio" with your specific topic
+          repo.topics.includes("portfolio")
         );
         setRepos(filteredRepos);
       });

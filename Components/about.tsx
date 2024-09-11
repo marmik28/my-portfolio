@@ -1,9 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { ChakraProvider, Box, Text, Stack, Image, Flex } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import "../app/globals.css";
 
+
 const AboutMe: React.FC = () => {
+    const [avatarUrl, setAvatarUrl] = useState<string>("");
+
+    useEffect(() => {
+        fetch("https://api.github.com/users/marmik28")
+          .then((response) => response.json())
+          .then((data) => {
+            setAvatarUrl(data.avatar_url);  // Set the avatar URL in state
+          })
+          .catch((error) => console.error("Error fetching GitHub data: ", error));
+      
+      }, []);
+    
     return (
         <ChakraProvider>
             <div className="relative max-w-screen-xl w-full my-0 mx-auto px-4 pt-[2vh] pb-[10vh] md:pb-[12vh]">
@@ -52,7 +65,7 @@ const AboutMe: React.FC = () => {
                             textAlign={{ base: "center", md: "right" }}
                         >
                             <Image
-                                src="Capt.jpg"
+                                src={avatarUrl}
                                 alt="Marmik Patel"
                                 borderRadius="full"
                                 boxSize={{ base: "150px", md: "300px" }}
