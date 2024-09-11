@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
         </div>
 
         {/* Text Content */}
-        <p className="relative text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-medium text-gray-600 leading-relaxed slide delay md:leading-loose">
+        <p className="relative text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-medium heroText2 leading-relaxed slide delay md:leading-loose">
           Hey There! I&apos;m-
         </p>
 

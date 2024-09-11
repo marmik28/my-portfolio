@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
                         <Link href="https://github.com/marmik28" passHref>
                             <Button
                                 leftIcon={<FaGithub />}
-                                colorScheme="blackAlpha"
+                                colorScheme="black"
                                 variant="outline"
                                 size="md"
                                 className="flex items-center px-6 py-3 text-lg font-medium hover:bg-[#3CCF91] transition duration-300 ease-in-out"
@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
                         <Link href="https://www.linkedin.com/in/marmikpatel28" passHref>
                             <Button
                                 leftIcon={<FaLinkedin />}
-                                colorScheme="blackAlpha"
+                                colorScheme="black"
                                 variant="outline"
                                 size="md"
                                 className="flex items-center px-6 py-3 text-lg font-medium hover:bg-[#3CCF91] transition duration-300 ease-in-out"
@@ -54,7 +54,7 @@ const Footer: React.FC = () => {
                         <Link href="mailto:marmik28112002@gmail.com" passHref>
                             <Button
                                 leftIcon={<FaEnvelope />}
-                                colorScheme="blackAlpha"
+                                colorScheme="black"
                                 variant="outline"
                                 size="md"
                                 className="flex items-center px-6 py-3 text-lg font-medium hover:bg-[#3CCF91] transition duration-300 ease-in-out"
