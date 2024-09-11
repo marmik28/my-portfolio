@@ -19,6 +19,7 @@ You can view the live website at [marmik.io](https://marmik.io).
 - **Responsive Design**: The website is fully responsive and adapts to different screen sizes.
 - **Animated Sections**: Sections like 'About Me' and 'Projects' feature smooth animations using Framer Motion.
 - **Projects Showcase**: Displays my GitHub repositories as projects with detailed descriptions and links.
+- **Dark Mode**: Currently working on implementing a dark mode in the website.
 
 ## 🛠️ Installation & Setup
 
