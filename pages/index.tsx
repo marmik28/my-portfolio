@@ -5,6 +5,7 @@ import AboutMe from "@/Components/about";
 import ProjectsSection from "@/Components/projects";
 import ResumeSection from "@/Components/resume";
 import Footer from "@/Components/footer";
+import Head from "next/head";
 
 const Home = () => {
   useEffect(() => {
@@ -12,6 +13,11 @@ const Home = () => {
   }, []);
   return (
     <>
+    <Head>
+      <title>Marmik</title>
+      <meta name="description" content="Marmik's personal website" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </Head>
       <Header />
 
       <section id="hero">
