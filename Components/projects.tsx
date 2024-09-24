@@ -67,13 +67,13 @@ const ProjectsSection: React.FC = () => {
                 borderWidth="1px"
                 borderRadius="lg"
                 overflow="hidden"
-                shadow="md"
+                shadow="lg"
                 transition="all 0.3s ease-in-out"
                 _hover={{ shadow: "lg" }}
               >
                 <LinkOverlay href={repo.html_url} isExternal>
                   <Text fontWeight="bold" fontSize="xl" mb={2}>
-                    {repo.name}
+                    {repo.name.toUpperCase()}
                   </Text>
                   <Text mb={4} color="gray.600">
                     {repo.description}
@@ -81,7 +81,7 @@ const ProjectsSection: React.FC = () => {
                   <Button
                     leftIcon={<Icon as={FaGithub} />}
                     colorScheme="teal"
-                    variant="outline"
+                    variant="solid"
                   >
                     View Repository
                   </Button>
