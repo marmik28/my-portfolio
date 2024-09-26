@@ -8,6 +8,8 @@ import {
   SimpleGrid,
   Image,
   Flex,
+  Link as ChakraLink,
+  Button
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import {
@@ -19,6 +21,7 @@ import {
   FaCss3Alt,
   FaGit,
   FaReact,
+  FaDownload,
 } from "react-icons/fa";
 import {
   SiC,
@@ -410,6 +413,28 @@ const ResumeSection: React.FC = () => {
               </Box>
             </Box>
           </VStack>
+        </MotionBox>
+        <MotionBox
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.4 }}
+          mb={{ base: 5, md: 15 }}
+        >
+          <ChakraLink
+            href="/Marmik Resume.pdf"
+            download="Marmik Resume.pdf"
+            isExternal
+          >
+            <Button
+              leftIcon={<FaDownload />}
+              colorScheme="teal"
+              size="lg"
+              variant="solid"
+            >
+              Download Resume
+            </Button>
+          </ChakraLink>
         </MotionBox>
       </Box>
     </ChakraProvider>
