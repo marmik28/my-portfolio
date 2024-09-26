@@ -419,7 +419,7 @@ const ResumeSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.4 }}
-          mb={{ base: 5, md: 15 }}
+          mb={{ base: 4, md: 0 }}
         >
           <ChakraLink
             href="/Marmik Resume.pdf"
