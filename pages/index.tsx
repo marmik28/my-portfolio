@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import React, { useEffect } from "react";
 import Hero from "@/Components/hero";
 import Header from "@/Components/header";
@@ -13,11 +14,12 @@ const Home = () => {
   }, []);
   return (
     <>
-    <Head>
-      <title>Marmik</title>
-      <meta name="description" content="Marmik's personal website" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    </Head>
+      <Head>
+        <title>Marmik</title>
+        <meta name="description" content="Marmik's personal website" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
+      <Analytics />
       <Header />
 
       <section id="hero">
