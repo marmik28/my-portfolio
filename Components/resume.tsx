@@ -102,6 +102,19 @@ const ResumeSection: React.FC = () => {
                 Work Experience
               </Text>
               <Box>
+
+  <Box mb={6}>
+                  <Text fontWeight="600" fontSize={{ base: "md", md: "lg" }}>
+                    Fullstack Developer at Workleap
+                  </Text>
+                  <Text color="gray.600" fontSize={{ base: "sm", md: "md" }}>
+                    Jan 2025 - May 2025
+                  </Text>
+                  <Text mt={2} fontSize={{ base: "sm", md: "md" }}>
+                  Will work on feature and product development using React and C#.
+                  </Text>
+                </Box>
+                <Divider />
                 {/* Matrox Video */}
                 <Box mb={6}>
                   <Text fontWeight="600" fontSize={{ base: "md", md: "lg" }}>
