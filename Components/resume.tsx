@@ -121,7 +121,7 @@ const ResumeSection: React.FC = () => {
                     Software Developer Intern at Matrox Video
                   </Text>
                   <Text color="gray.600" fontSize={{ base: "sm", md: "md" }}>
-                    May 2024 - Present
+                    May 2024 - Dec 2024
                   </Text>
                   <Text mt={2} fontSize={{ base: "sm", md: "md" }}>
                     Developed and maintained IPKVM device management software
@@ -139,7 +139,7 @@ const ResumeSection: React.FC = () => {
                   </Text>
                   <Text mt={2} fontSize={{ base: "sm", md: "md" }}>
                     Built a user-friendly global website, developed RESTful APIs
-                    to support seamless communication between the front-end and
+                    to support seamless communication between the front end and
                     back-end.
                   </Text>
                 </Box>
