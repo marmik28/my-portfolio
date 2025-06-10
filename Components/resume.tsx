@@ -435,8 +435,8 @@ const ResumeSection: React.FC = () => {
           mb={{ base: 4, md: 0 }}
         >
           <ChakraLink
-            href="/Marmik Resume.pdf"
-            download="Marmik Resume.pdf"
+            href="/MarmikResume.pdf"
+            download="MarmikResume.pdf"
             isExternal
           >
             <Button
