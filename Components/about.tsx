@@ -1,83 +1,52 @@
-import React, { useEffect, useState } from "react";
-import { ChakraProvider, Box, Text, Stack, Image, Flex } from "@chakra-ui/react";
+import React from "react";
 import { motion } from "framer-motion";
 import "../app/globals.css";
 
-
 const AboutMe: React.FC = () => {
-    const [avatarUrl, setAvatarUrl] = useState<string>("");
+  return (
+    <div className="max-w-6xl mx-auto px-6 py-20 md:py-28">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        <div className="border-t border-cream-300 pt-8 mb-12">
+          <span className="text-sm font-medium tracking-widest uppercase text-accent">
+            About
+          </span>
+        </div>
 
-    useEffect(() => {
-        fetch("https://api.github.com/users/marmik28")
-          .then((response) => response.json())
-          .then((data) => {
-            setAvatarUrl(data.avatar_url);  // Set the avatar URL in state
-          })
-          .catch((error) => console.error("Error fetching GitHub data: ", error));
-      
-      }, []);
-    
-    return (
-        <ChakraProvider>
-            <div className="relative max-w-screen-xl w-full my-0 mx-auto px-4 pt-[2vh] pb-[10vh] md:pb-[12vh]">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                    viewport={{ once: true, amount: 0.4 }}
-                >
-                    <Flex
-                        direction={{ base: "column", md: "row" }}
-                        alignItems="center"
-                        justifyContent="space-between"
-                        className="relative"
-                    >
-                        <Box flex="1">
-                            <Text className="text-4xl md:text-5xl lg:text-6xl font-poppins font-semibold pb-4">
-                                About Me
-                            </Text>
-                            <Stack spacing={6} className="text-base md:text-lg lg:text-xl font-light text-gray-600 leading-relaxed md:leading-loose">
-                                <Text>
-                                    I&apos;m Marmik Patel, a software developer with a passion for creating modern, scalable software.
-                                </Text>
-                                <Text>
-                                    My journey in coding began with a deep fascination for problem-solving and a love for technology.
-                                    Over the years, I&apos;ve honed my skills in full-stack development, mastering technologies like React,
-                                    Node.js, and more.
-                                </Text>
-                                <Text>
-                                    I believe in writing clean, efficient code that not only works but also adds value to the user experience.
-                                    When I&apos;m not coding, I enjoy exploring new technologies, contributing to open-source projects, and
-                                    engaging with the developer community.
-                                </Text>
-                                <Text>
-                                    I&apos;m constantly learning and evolving, driven by my passion for coding and a commitment to delivering
-                                    high-quality software solutions.
-                                </Text>
-                            </Stack>
-                        </Box>
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16">
+          <div className="md:col-span-5">
+            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-slate-primary leading-tight">
+              Building software that matters.
+            </h2>
+          </div>
 
-                        {/* Image */}
-                        <Box
-                            flex="1"
-                            mt={{ base: 8, md: 0 }}
-                            ml={{ base: 0, md: 8 }}
-                            textAlign={{ base: "center", md: "right" }}
-                        >
-                            <Image
-                                src={avatarUrl}
-                                alt="Marmik Patel"
-                                borderRadius="full"
-                                boxSize={{ base: "150px", md: "300px" }}
-                                objectFit="cover"
-                                mx="auto"
-                            />
-                        </Box>
-                    </Flex>
-                </motion.div>
-            </div>
-        </ChakraProvider>
-    );
+          <div className="md:col-span-7 space-y-6">
+            <p className="text-base md:text-lg text-slate-secondary leading-relaxed">
+              I&apos;m Marmik Patel, a software developer with a passion for
+              creating modern, scalable software. My journey in coding began
+              with a deep fascination for problem-solving and a love for
+              technology.
+            </p>
+            <p className="text-base md:text-lg text-slate-secondary leading-relaxed">
+              Over the years, I&apos;ve honed my skills in full-stack
+              development, working with technologies like React, Node.js, Java,
+              C#, and more. I believe in writing clean, efficient code that not
+              only works but also adds value to the user experience.
+            </p>
+            <p className="text-base md:text-lg text-slate-secondary leading-relaxed">
+              When I&apos;m not coding, I enjoy exploring new technologies,
+              contributing to open-source projects, and engaging with the
+              developer community.
+            </p>
+          </div>
+        </div>
+      </motion.div>
+    </div>
+  );
 };
 
 export default AboutMe;

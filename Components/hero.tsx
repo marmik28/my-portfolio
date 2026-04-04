@@ -1,91 +1,58 @@
 import React from "react";
 import "../app/globals.css";
-import { Button, ChakraProvider, Stack } from "@chakra-ui/react";
-import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FiMail, FiArrowDownRight } from "react-icons/fi";
 
 const Hero: React.FC = () => {
   return (
-    <ChakraProvider>
-      <div className="relative max-w-screen-xl w-full my-0 mx-auto px-4 pt-[18vh] pb-[14vh] md:pt-[26vh] md:pb-[18vh] slide delay01">
-        {/* Background SVG */}
-        <div className="absolute inset-0 flex justify-center items-center opacity-10">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="w-[80vw] h-[80vh] text-slate-500"
-          >
-            <polyline points="15 3 21 9 15 15"></polyline>
-            <polyline points="9 21 3 15 9 9"></polyline>
-          </svg>
-        </div>
+    <div className="max-w-6xl mx-auto px-6 pt-[22vh] pb-[16vh] md:pt-[28vh] md:pb-[20vh]">
+      <p className="text-sm md:text-base font-medium tracking-widest uppercase text-accent mb-6 animate-slide-up delay-1">
+        Software Developer
+      </p>
 
-        {/* Text Content */}
-        <p className="relative text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-medium heroText2 leading-relaxed slide delay md:leading-loose">
-          Hey There! I&apos;m-
-        </p>
+      <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-semibold text-slate-primary leading-[1.05] mb-8 animate-slide-up delay-2">
+        Marmik Patel
+      </h1>
 
-        <br />
-        <h1 className="relative text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-poppins font-semibold heroText pb-6 md:pb-8">
-          Marmik Patel.
-          <br />
-          <span className="heroText2">Software Developer</span>
-        </h1>
-        <p className="relative text-base md:text-lg lg:text-xl xl:text-2xl font-light text-gray-600 leading-relaxed slide delay02 md:leading-loose mb-8 md:mb-10">
-          Driven by a passion for coding,
-          <br />
-          My goal is to turn ideas into reality with elegant and efficient code.
-        </p>
+      <p className="max-w-xl text-lg md:text-xl text-slate-secondary leading-relaxed mb-12 animate-slide-up delay-3">
+        Driven by a passion for coding, my goal is to turn ideas into reality
+        with elegant and efficient software.
+      </p>
 
-        {/* Social Media Links */}
-        <div className="relative slide delay02">
-          <Stack
-            direction="row"
-            spacing={4}
-            align="center"
-            justify={{ sm: "space-evenly", md: "flex-start" }}
-          >
-            <a href="https://github.com/marmik28">
-              <Button
-                leftIcon={<FaGithub />}
-                colorScheme="black"
-                variant="outline"
-                size={{ base: "sm", md: "md" }}
-                className="flex items-center px-6 py-3 text-lg font-medium hover:bg-[#3CCF91] transition duration-300 ease-in-out"
-              >
-                Github
-              </Button>
-            </a>
-            <a href="https://www.linkedin.com/in/marmikpatel28">
-              <Button
-                leftIcon={<FaLinkedin />}
-                colorScheme="black"
-                variant="outline"
-                size={{ base: "sm", md: "md" }}
-                className="flex items-center px-6 py-3 text-lg font-medium hover:bg-[#3CCF91] transition duration-300 ease-in-out"
-              >
-                LinkedIn
-              </Button>
-            </a>
-            <a href="mailto:marmik28112002@gmail.com">
-              <Button
-                leftIcon={<FaEnvelope />}
-                colorScheme="black"
-                variant="outline"
-                size={{ base: "sm", md: "md" }}
-                className="flex items-center px-6 py-3 text-lg font-medium hover:bg-[#3CCF91] transition duration-300 ease-in-out"
-              >
-                Email
-              </Button>
-            </a>
-          </Stack>
-        </div>
+      <div className="flex items-center gap-4 animate-slide-up delay-4">
+        <a
+          href="https://github.com/marmik28"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-11 h-11 rounded-full border border-cream-300 flex items-center justify-center text-slate-secondary hover:text-slate-primary hover:border-slate-primary transition-all duration-200"
+          aria-label="GitHub"
+        >
+          <FaGithub size={18} />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/marmikpatel28"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-11 h-11 rounded-full border border-cream-300 flex items-center justify-center text-slate-secondary hover:text-slate-primary hover:border-slate-primary transition-all duration-200"
+          aria-label="LinkedIn"
+        >
+          <FaLinkedin size={18} />
+        </a>
+        <a
+          href="mailto:marmik28112002@gmail.com"
+          className="w-11 h-11 rounded-full border border-cream-300 flex items-center justify-center text-slate-secondary hover:text-slate-primary hover:border-slate-primary transition-all duration-200"
+          aria-label="Email"
+        >
+          <FiMail size={18} />
+        </a>
+        <a
+          href="#projects"
+          className="ml-4 inline-flex items-center gap-2 text-sm font-medium text-accent hover:text-accent-hover transition-colors duration-200"
+        >
+          See my work <FiArrowDownRight size={16} />
+        </a>
       </div>
-    </ChakraProvider>
+    </div>
   );
 };
 

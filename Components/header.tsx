@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
 import "../app/globals.css";
 import Link from "next/link";
 import router from "next/router";
 
 const Header: React.FC = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
@@ -20,73 +20,108 @@ const Header: React.FC = () => {
   }, [isMobileMenuOpen]);
 
   useEffect(() => {
-    window.history.scrollRestoration = "manual";
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const navLinks = [
+    { label: "About", href: "#about" },
+    { label: "Projects", href: "#projects" },
+    { label: "Experience", href: "#experience" },
+  ];
+
   return (
-    <div className="block">
-      <div className="flex justify-between items-center fixed z-50 top-0 left-0 right-0 mx-auto max-w-screen-xl w-full py-4 bg-white md:py-8">
-        <Link href="#hero">
-          <p className="m-0 py-0 px-4 font-poppins font-medium slide delay text-3xl">
-            <span className="heroText2">&lt;</span>M /
-            <span className="heroText2">&gt;</span>
-          </p>
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-cream-100/90 backdrop-blur-md border-b border-cream-300"
+          : "bg-transparent"
+      }`}
+    >
+      <nav className="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
+        <Link
+          href="#hero"
+          className="font-serif text-2xl font-semibold text-slate-primary tracking-tight animate-slide-up"
+        >
+          MP
         </Link>
-        <div className="hidden md:flex justify-between text-2xl font-medium">
-          <Link href="#projects" className="px-8 slide delay">
-            Projects
-          </Link>
-          <Link href="#about" className="px-8 slide delay">
-            About
-          </Link>
-          <Link href="#resume" className="px-8 slide delay">
+
+        {/* Desktop Nav */}
+        <div className="hidden md:flex items-center gap-10">
+          {navLinks.map((link, i) => (
+            <Link
+              key={link.label}
+              href={link.href}
+              className={`text-sm font-medium text-slate-secondary hover:text-slate-primary transition-colors duration-200 animate-slide-up delay-${i + 1}`}
+            >
+              {link.label}
+            </Link>
+          ))}
+          <a
+            href="/MarmikResume.pdf"
+            download="MarmikResume.pdf"
+            className="text-sm font-medium px-5 py-2.5 rounded-full border border-slate-primary text-slate-primary hover:bg-slate-primary hover:text-cream-50 transition-all duration-200 animate-slide-up delay-4"
+          >
             Resume
-          </Link>
+          </a>
         </div>
-        <div className="md:hidden px-4 slide delay">
-          <button onClick={toggleMobileMenu} className="text-3xl">
-            {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
-          </button>
-        </div>
+
+        {/* Mobile Toggle */}
+        <button
+          onClick={toggleMobileMenu}
+          className="md:hidden w-8 h-8 flex flex-col items-center justify-center gap-1.5 animate-slide-up"
+          aria-label="Toggle menu"
+        >
+          <span
+            className={`block w-5 h-[1.5px] bg-slate-primary transition-all duration-300 ${
+              isMobileMenuOpen ? "rotate-45 translate-y-[4.5px]" : ""
+            }`}
+          />
+          <span
+            className={`block w-5 h-[1.5px] bg-slate-primary transition-all duration-300 ${
+              isMobileMenuOpen ? "-rotate-45 -translate-y-[1.5px]" : ""
+            }`}
+          />
+        </button>
+
+        {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="fixed top-0 left-0 right-0 bottom-0 bg-white flex flex-col items-center justify-center text-4xl font-medium z-50">
+          <div className="fixed inset-0 bg-cream-100 flex flex-col items-center justify-center z-50">
             <button
               onClick={toggleMobileMenu}
-              className="absolute top-4 right-4 text-3xl"
+              className="absolute top-5 right-6 w-8 h-8 flex flex-col items-center justify-center gap-1.5"
+              aria-label="Close menu"
             >
-              <FaTimes />
+              <span className="block w-5 h-[1.5px] bg-slate-primary rotate-45 translate-y-[1.5px]" />
+              <span className="block w-5 h-[1.5px] bg-slate-primary -rotate-45 -translate-y-[1.5px]" />
             </button>
-            <div
-              className="py-4 slide delay cursor-pointer"
-              onClick={() => {
-                toggleMobileMenu();
-                router.push("#projects");
-              }}
-            >
-              Projects
-            </div>
-            <div
-              className="py-4 slide delay cursor-pointer"
-              onClick={() => {
-                toggleMobileMenu();
-                router.push("#about");
-              }}
-            >
-              About
-            </div>
-            <div
-              className="py-4 slide delay cursor-pointer"
-              onClick={() => {
-                toggleMobileMenu();
-                router.push("#resume");
-              }}
+            {navLinks.map((link) => (
+              <div
+                key={link.label}
+                className="py-4 text-2xl font-serif font-medium text-slate-primary cursor-pointer hover:text-accent transition-colors"
+                onClick={() => {
+                  toggleMobileMenu();
+                  router.push(link.href);
+                }}
+              >
+                {link.label}
+              </div>
+            ))}
+            <a
+              href="/MarmikResume.pdf"
+              download="MarmikResume.pdf"
+              className="mt-6 text-lg font-medium px-8 py-3 rounded-full border border-slate-primary text-slate-primary hover:bg-slate-primary hover:text-cream-50 transition-all duration-200"
+              onClick={toggleMobileMenu}
             >
               Resume
-            </div>
+            </a>
           </div>
         )}
-      </div>
-    </div>
+      </nav>
+    </header>
   );
 };
 

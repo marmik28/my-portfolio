@@ -4,7 +4,7 @@ import Hero from "@/Components/hero";
 import Header from "@/Components/header";
 import AboutMe from "@/Components/about";
 import ProjectsSection from "@/Components/projects";
-import ResumeSection from "@/Components/resume";
+import ExperienceSection from "@/Components/resume";
 import Footer from "@/Components/footer";
 import Head from "next/head";
 
@@ -15,9 +15,13 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>Marmik</title>
-        <meta name="description" content="Marmik's personal website" />
+        <title>Marmik Patel — Software Developer</title>
+        <meta
+          name="description"
+          content="Marmik Patel — Software developer building elegant, efficient software."
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </Head>
       <Analytics />
       <Header />
@@ -34,8 +38,8 @@ const Home = () => {
         <ProjectsSection />
       </section>
 
-      <section id="resume">
-        <ResumeSection />
+      <section id="experience">
+        <ExperienceSection />
       </section>
 
       <Footer />

@@ -1,72 +1,53 @@
 import React from "react";
-import { ChakraProvider, Stack, Text, Button } from "@chakra-ui/react";
-import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
-import Link from 'next/link';
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FiMail } from "react-icons/fi";
+import "../app/globals.css";
 
 const Footer: React.FC = () => {
-    return (
-        <ChakraProvider>
-            <footer className="py-8">
-                <div className="max-w-screen-xl w-full my-0 mx-auto px-4">
-                    {/* Footer Content */}
-                    <Stack
-                        direction={{ base: "column", md: "row" }}
-                        spacing={6}
-                        align="center"
-                        justify="center"
-                        mb={8}
-                    >
-                        <Text fontSize="lg" fontWeight="medium">
-                            © {new Date().getFullYear()} Marmik Patel. All rights reserved.
-                        </Text>
-                        
-                    </Stack>
+  return (
+    <footer className="border-t border-cream-300">
+      <div className="max-w-6xl mx-auto px-6 py-12 md:py-16">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="flex flex-col items-center md:items-start gap-2">
+            <span className="font-serif text-xl font-semibold text-slate-primary">
+              MP
+            </span>
+            <span className="text-sm text-slate-secondary">
+              &copy; {new Date().getFullYear()} Marmik Patel
+            </span>
+          </div>
 
-                    {/* Social Media Links */}
-                    <Stack
-                        direction="row"
-                        spacing={4}
-                        align="center"
-                        justify="center"
-                    >
-                        <Link href="https://github.com/marmik28" passHref>
-                            <Button
-                                leftIcon={<FaGithub />}
-                                colorScheme="black"
-                                variant="outline"
-                                size="md"
-                                className="flex items-center px-6 py-3 text-lg font-medium hover:bg-[#3CCF91] transition duration-300 ease-in-out"
-                            >
-                                Github
-                            </Button>
-                        </Link>
-                        <Link href="https://www.linkedin.com/in/marmikpatel28" passHref>
-                            <Button
-                                leftIcon={<FaLinkedin />}
-                                colorScheme="black"
-                                variant="outline"
-                                size="md"
-                                className="flex items-center px-6 py-3 text-lg font-medium hover:bg-[#3CCF91] transition duration-300 ease-in-out"
-                            >
-                                LinkedIn
-                            </Button>
-                        </Link>
-                        <Link href="mailto:marmik28112002@gmail.com" passHref>
-                            <Button
-                                leftIcon={<FaEnvelope />}
-                                colorScheme="black"
-                                variant="outline"
-                                size="md"
-                                className="flex items-center px-6 py-3 text-lg font-medium hover:bg-[#3CCF91] transition duration-300 ease-in-out"
-                            >
-                                Email
-                            </Button>
-                        </Link>
-                    </Stack>
-                </div>
-            </footer>
-        </ChakraProvider>
-    );
+          <div className="flex items-center gap-4">
+            <a
+              href="https://github.com/marmik28"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-full border border-cream-300 flex items-center justify-center text-slate-secondary hover:text-slate-primary hover:border-slate-primary transition-all duration-200"
+              aria-label="GitHub"
+            >
+              <FaGithub size={16} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/marmikpatel28"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-full border border-cream-300 flex items-center justify-center text-slate-secondary hover:text-slate-primary hover:border-slate-primary transition-all duration-200"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedin size={16} />
+            </a>
+            <a
+              href="mailto:marmik28112002@gmail.com"
+              className="w-10 h-10 rounded-full border border-cream-300 flex items-center justify-center text-slate-secondary hover:text-slate-primary hover:border-slate-primary transition-all duration-200"
+              aria-label="Email"
+            >
+              <FiMail size={16} />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;
