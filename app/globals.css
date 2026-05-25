@@ -753,6 +753,98 @@ body {
   .eb-contact-cards { grid-template-columns: 1fr; }
 }
 
+/* ── Résumé modal ───────────────────────────────────────────────── */
+.eb-resume-modal {
+  position: fixed; inset: 0; z-index: 1000;
+  background: rgba(20, 18, 14, 0.72);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: flex; align-items: center; justify-content: center;
+  padding: clamp(0px, 4vw, 40px);
+  animation: eb-fade-in 160ms ease-out;
+  overscroll-behavior: contain;
+}
+.eb-resume-modal-inner {
+  background: var(--eb-bg);
+  width: min(1100px, 100%);
+  height: min(92vh, 1300px);
+  max-height: 100dvh;
+  display: flex; flex-direction: column;
+  border: 1px solid var(--eb-ink);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.35);
+  overflow: hidden;
+}
+.eb-resume-modal-bar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--eb-ink);
+  gap: 12px;
+  flex-wrap: nowrap;
+  min-height: 48px;
+}
+.eb-resume-modal-title {
+  font-family: var(--font-mono, ui-monospace, monospace);
+  font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase;
+  color: var(--eb-ink);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  min-width: 0;
+}
+.eb-resume-modal-actions {
+  display: flex; align-items: center; gap: 8px; flex-shrink: 0;
+}
+.eb-resume-modal-btn {
+  font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase;
+  padding: 6px 10px; border: 1px solid var(--eb-ink);
+  color: var(--eb-ink); text-decoration: none; background: transparent;
+  cursor: pointer; transition: background 120ms, color 120ms;
+  white-space: nowrap;
+}
+.eb-resume-modal-btn:hover { background: var(--eb-ink); color: var(--eb-bg); }
+.eb-resume-modal-close {
+  width: 32px; height: 32px; padding: 0;
+  border: 1px solid var(--eb-ink); background: transparent;
+  color: var(--eb-ink); cursor: pointer; font-size: 14px; line-height: 1;
+  display: inline-flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.eb-resume-modal-close:hover { background: var(--eb-ink); color: var(--eb-bg); }
+.eb-resume-modal-frame {
+  flex: 1; width: 100%; border: 0; background: #fff;
+  min-height: 0;
+}
+@keyframes eb-fade-in { from { opacity: 0; } to { opacity: 1; } }
+
+/* Tablet — hide the verbose "Open in new tab" label, keep download */
+@media (max-width: 720px) {
+  .eb-resume-modal-title { font-size: 11px; }
+  .eb-resume-modal-btn { padding: 6px 8px; font-size: 11px; }
+}
+
+/* Phone — fullscreen, compact bar */
+@media (max-width: 560px) {
+  .eb-resume-modal { padding: 0; }
+  .eb-resume-modal-inner {
+    height: 100vh; height: 100dvh;
+    width: 100vw; border: 0;
+  }
+  .eb-resume-modal-bar { padding: 8px 10px; min-height: 44px; }
+  .eb-resume-modal-actions { gap: 6px; }
+}
+
+/* Very narrow — drop the "Open in new tab" button to save room */
+@media (max-width: 380px) {
+  .eb-resume-modal-open-tab { display: none; }
+  .eb-resume-modal-title { font-size: 10px; }
+}
+
+/* Short viewports (landscape phones) */
+@media (max-height: 480px) {
+  .eb-resume-modal { padding: 0; }
+  .eb-resume-modal-inner {
+    width: 100vw; height: 100vh; height: 100dvh; border: 0;
+  }
+}
+
 /* ── Mobile type trims ──────────────────────────────────────────── */
 @media (max-width: 900px) {
   .eb-hero-vert { display: none; }
