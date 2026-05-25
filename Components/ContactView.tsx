@@ -1,4 +1,5 @@
 import React from "react";
+import { track } from "@vercel/analytics";
 import { MARMIK, STATS } from "./portfolio-data";
 
 const CARDS: { k: string; v: string; href: string; external: boolean }[] = [
@@ -30,6 +31,7 @@ const ContactView: React.FC = () => {
               href={c.href}
               target={c.external ? "_blank" : undefined}
               rel={c.external ? "noopener noreferrer" : undefined}
+              onClick={() => track("contact_click", { type: c.k })}
             >
               <div className="eb-card-k">{c.k} ↗</div>
               <div className="eb-card-v">{c.v}</div>

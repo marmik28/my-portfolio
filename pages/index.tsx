@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
 import Head from "next/head";
-import { Analytics } from "@vercel/analytics/react";
+import { track } from "@vercel/analytics";
 import type { Page } from "@/Components/portfolio-data";
 import Nav from "@/Components/Nav";
 import HomeView from "@/Components/HomeView";
@@ -18,6 +18,7 @@ const Portfolio: React.FC = () => {
   const setPage = useCallback((p: Page) => {
     setPageState(p);
     window.scrollTo({ top: 0, behavior: "auto" });
+    track("view_change", { view: p });
   }, []);
 
   return (
@@ -30,7 +31,6 @@ const Portfolio: React.FC = () => {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      <Analytics />
 
       <div className="eb-app">
         <div className="eb-shell">
