@@ -54,7 +54,7 @@ const HomeView: React.FC<{ setPage: (p: Page) => void }> = ({ setPage }) => {
       {/* Hero grid */}
       <div className="eb-hero-grid">
         <div className="eb-hero-vert">
-          ↳ Software developer, product builder, Solana protocol engineer
+          ↳ Full-stack engineer, product builder, Solana protocol engineer
         </div>
         <div className="eb-hero-main">
           <div className="eb-hero-kicker">★ Featured · Portfolio</div>
@@ -92,9 +92,10 @@ const HomeView: React.FC<{ setPage: (p: Page) => void }> = ({ setPage }) => {
         <div>
           <div className="eb-label">Currently</div>
           <div className="eb-currently">
-            Shipping <b>Voyager</b>&rsquo;s settlement layer. Learning more{" "}
-            <b>MEV mechanics</b>. Reading <i>Designing Data-Intensive Apps</i>.
-            Playing pickup basketball Tuesdays.
+            Shipping <b>Echo</b> — a multi-platform publishing tool for Reddit
+            &amp; Discord. Learning more <b>AMM &amp; MEV mechanics</b>. Reading{" "}
+            <i>Designing Data-Intensive Apps</i>. Playing pickup cricket
+            Tuesdays.
           </div>
         </div>
 

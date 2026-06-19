@@ -24,10 +24,10 @@ const Portfolio: React.FC = () => {
   return (
     <>
       <Head>
-        <title>Marmik Patel — Software Developer</title>
+        <title>Marmik Patel — Full-Stack Software Engineer</title>
         <meta
           name="description"
-          content="Marmik Patel — software developer obsessed with shipping. Solana protocol engineering, latency-bound matching engines, full-stack systems."
+          content="Marmik Patel — full-stack software engineer who ships. Solana protocol work, latency-bound systems in Rust, and full-stack products across SaaS, fintech, and blockchain."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>

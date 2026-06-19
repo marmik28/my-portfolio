@@ -46,8 +46,8 @@ const AboutView: React.FC = () => {
 
         <div className="eb-offkb">─ Off the keyboard ─</div>
         <p className="eb-offkb-text">
-          Loves making products. Loves learning. Plays basketball, cricket, and
-          runs the 5K when the weather allows.
+          Loves making products. Loves learning. Plays cricket and runs the 5K
+          when the weather allows.
         </p>
       </div>
     </div>
